@@ -9,6 +9,8 @@ import SkillChart from './components/SkillChart';
 import ExperienceCard from './components/ExperienceCard';
 import ContactForm from './components/ContactForm';
 import { experienceData } from './data/experienceData';
+import AnimatedCounter from './AnimatedCounter';
+import BrandCarousel from './components/BrandCarousel';
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('hero');
@@ -94,7 +96,7 @@ export default function Portfolio() {
       technologies: ["React", "JavaScript", "CSS", "Firebase"],
       image: "/images/imagewebsushi.png",
       github: "https://github.com/SAYKOTM/appsushi",
-      demo: "https://github.com/SAYKOTM/appsushi",
+      demo: "https://appsushi.vercel.app/",
       status: "En desarrollo"
     },
     {
@@ -121,26 +123,26 @@ export default function Portfolio() {
 
   // Skills basadas en la imagen proporcionada
   const skills = [
-    { 
-      category: "Frontend", 
+    {
+      category: "Frontend",
       items: ["JavaScript", "HTML/CSS", "Tailwind"],
       color: "from-indigo-400 to-indigo-500",
       icon: "💻"
     },
-    { 
-      category: "Backend", 
+    {
+      category: "Backend",
       items: ["Node.js", "Express", "REST APIs"],
       color: "from-indigo-500 to-indigo-600",
       icon: "⚡"
     },
-    { 
-      category: "Bases de Datos", 
+    {
+      category: "Bases de Datos",
       items: ["MongoDB", "Firebase"],
       color: "from-indigo-600 to-indigo-700",
       icon: "🗄️"
     },
-    { 
-      category: "Herramientas", 
+    {
+      category: "Herramientas",
       items: ["Git/GitHub", "VS Code", "Netlify"],
       color: "from-indigo-400 to-indigo-600",
       icon: "🛠️"
@@ -173,51 +175,7 @@ export default function Portfolio() {
     setActiveSection(sectionId);
   };
 
-  // Componente de contador animado
-  const AnimatedCounter = ({ value, suffix, duration = 2000, color = "from-indigo-400 to-indigo-500" }) => {
-    const [count, setCount] = useState(0);
-    const [hasAnimated, setHasAnimated] = useState(false);
-    const counterRef = useRef(null);
 
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          if (entries[0].isIntersecting && !hasAnimated) {
-            setHasAnimated(true);
-            let startTime;
-            const animate = (currentTime) => {
-              if (!startTime) startTime = currentTime;
-              const progress = (currentTime - startTime) / duration;
-
-              if (progress < 1) {
-                setCount(Math.floor(value * progress));
-                requestAnimationFrame(animate);
-              } else {
-                setCount(value);
-              }
-            };
-            requestAnimationFrame(animate);
-          }
-        },
-        { threshold: 0.5 }
-      );
-
-      if (counterRef.current) {
-        observer.observe(counterRef.current);
-      }
-
-      return () => observer.disconnect();
-    }, [value, duration, hasAnimated]);
-
-    return (
-      <span 
-        ref={counterRef} 
-        className={`text-4xl md:text-5xl font-bold bg-gradient-to-r ${color} bg-clip-text text-transparent`}
-      >
-        {count}{suffix}
-      </span>
-    );
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
@@ -228,7 +186,7 @@ export default function Portfolio() {
             <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-indigo-400 to-indigo-300 bg-clip-text text-transparent">
               Nicolás Hernández
             </div>
-            
+
             {/* Menú desktop */}
             <div className="hidden md:flex gap-6 lg:gap-8">
               {['Inicio', 'Stats', 'Proyectos', 'Habilidades', 'Experiencia', 'Educación', 'Contacto'].map((item, idx) => (
@@ -242,9 +200,9 @@ export default function Portfolio() {
                 </button>
               ))}
             </div>
-            
+
             {/* Botón menú móvil */}
-            <button 
+            <button
               className="md:hidden text-indigo-400 p-2 rounded-lg hover:bg-gray-800/50 transition-colors"
               onClick={() => setIsMenuOpen(true)}
               aria-label="Abrir menú"
@@ -256,7 +214,7 @@ export default function Portfolio() {
       </nav>
 
       {/* Menú móvil */}
-      <MobileMenu 
+      <MobileMenu
         isOpen={isMenuOpen}
         onClose={() => setIsMenuOpen(false)}
         scrollToSection={scrollToSection}
@@ -265,37 +223,37 @@ export default function Portfolio() {
       {/* Hero Section */}
       <section id="inicio" className="min-h-screen flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div 
+          <div
             className="absolute w-64 sm:w-96 h-64 sm:h-96 bg-indigo-500/10 rounded-full blur-3xl -top-24 sm:-top-48 -left-24 sm:-left-48"
             style={{ transform: `translateY(${scrollY * 0.5}px)` }}
           ></div>
-          <div 
+          <div
             className="absolute w-64 sm:w-96 h-64 sm:h-96 bg-indigo-400/10 rounded-full blur-3xl -bottom-24 sm:-bottom-48 -right-24 sm:-right-48"
             style={{ transform: `translateY(${-scrollY * 0.3}px)` }}
           ></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center relative z-10">
           <div className="mb-6">
             <div className="w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-indigo-400 to-indigo-600 p-1 shadow-2xl shadow-indigo-500/50 animate-float">
-              <img 
+              <img
                 src="/images/perfil.jpeg"
                 alt="Nicolás Hernández"
                 className="w-full h-full rounded-full object-cover"
               />
             </div>
           </div>
-          
+
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6">
             <span className="bg-gradient-to-r from-indigo-400 via-indigo-500 to-indigo-600 bg-clip-text text-transparent">
               Nicolás Hernández
             </span>
           </h1>
-          
+
           <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto px-4">
             Estudiante de Ingeniería en Informática | Desarrollador Full Stack apasionado por crear soluciones digitales innovadoras
           </p>
-          
+
           <div className="flex gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 flex-wrap px-4">
             {[
               { href: socialLinks.github, icon: Github, label: "GitHub" },
@@ -303,7 +261,7 @@ export default function Portfolio() {
               { href: socialLinks.instagram, icon: Instagram, label: "Instagram" },
               { href: `mailto:${socialLinks.email}`, icon: Mail, label: "Email" }
             ].map((social, idx) => (
-              <a 
+              <a
                 key={idx}
                 href={social.href}
                 target={social.label !== "Email" ? "_blank" : undefined}
@@ -315,7 +273,20 @@ export default function Portfolio() {
               </a>
             ))}
           </div>
-          
+
+          <div className="flex justify-center gap-4 mb-8 sm:mb-12">
+            <a
+              href="/files/cv.pdf"
+              download="CV_Nicolas_Hernandez.pdf"
+              className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-full font-medium hover:opacity-90 transition-all duration-300 hover:scale-105 flex items-center gap-2 shadow-lg shadow-indigo-500/25"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Descargar CV
+            </a>
+          </div>
+
           <button
             onClick={() => scrollToSection('stats')}
             className="animate-bounce hover:text-indigo-300 transition-colors"
@@ -349,9 +320,9 @@ export default function Portfolio() {
                 <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-3 sm:mb-4 rounded-full bg-gradient-to-br ${stat.color} flex items-center justify-center group-hover:rotate-12 transition-transform duration-300`}>
                   <stat.icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
                 </div>
-                <AnimatedCounter 
-                  value={stat.value} 
-                  suffix={stat.suffix} 
+                <AnimatedCounter
+                  value={stat.value}
+                  suffix={stat.suffix}
                   color={stat.color}
                 />
                 <p className="text-gray-400 mt-1 sm:mt-2 text-xs sm:text-sm font-medium">{stat.label}</p>
@@ -360,6 +331,9 @@ export default function Portfolio() {
           </div>
         </div>
       </section>
+
+      {/* Brand Carousel */}
+      <BrandCarousel />
 
       {/* Projects Section */}
       <section id="proyectos" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
@@ -395,18 +369,17 @@ export default function Portfolio() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
                   <div className="absolute top-3 sm:top-4 right-3 sm:right-4">
-                    <span className={`px-3 sm:px-4 py-1 sm:py-1.5 rounded-lg text-xs sm:text-sm font-bold shadow-lg backdrop-blur-md ${
-                      project.status === 'Completado' 
-                        ? 'bg-green-600/80 text-green-100' 
-                        : project.status === 'En desarrollo'
+                    <span className={`px-3 sm:px-4 py-1 sm:py-1.5 rounded-lg text-xs sm:text-sm font-bold shadow-lg backdrop-blur-md ${project.status === 'Completado'
+                      ? 'bg-green-600/80 text-green-100'
+                      : project.status === 'En desarrollo'
                         ? 'bg-yellow-500/80 text-yellow-50'
                         : 'bg-indigo-600/80 text-indigo-100'
-                    }`}>
+                      }`}>
                       {project.status}
                     </span>
                   </div>
                 </div>
-                
+
                 <div className="p-4 sm:p-6">
                   <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 group-hover:text-indigo-400 transition-colors">
                     {project.title}
@@ -414,7 +387,7 @@ export default function Portfolio() {
                   <p className="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-2">
                     {project.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
                     {project.technologies.map((tech, i) => (
                       <span
@@ -425,7 +398,7 @@ export default function Portfolio() {
                       </span>
                     ))}
                   </div>
-                  
+
                   <div className="flex gap-2 sm:gap-3">
                     <a
                       href={project.github}
@@ -627,7 +600,7 @@ export default function Portfolio() {
                 { href: socialLinks.instagram, icon: Instagram, label: "Instagram" },
                 { href: `mailto:${socialLinks.email}`, icon: Mail, label: "Email" }
               ].map((social, idx) => (
-                <a 
+                <a
                   key={idx}
                   href={social.href}
                   target={social.label !== "Email" ? "_blank" : undefined}
@@ -653,18 +626,18 @@ export default function Portfolio() {
               </div>
               <p className="text-gray-400 text-sm mt-1">Desarrollador Full Stack</p>
             </div>
-            
+
             <div className="text-center">
               <p className="text-gray-400 text-sm">
                 © 2024 Nicolás Hernández. Todos los derechos reservados.
               </p>
               <p className="text-gray-500 text-xs mt-1">
-                Desarrollado con React, Tailwind y CSS 
+                Desarrollado con React, Tailwind y CSS
               </p>
             </div>
-            
+
             <div className="flex gap-4">
-              <a 
+              <a
                 href={socialLinks.github}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -673,7 +646,7 @@ export default function Portfolio() {
               >
                 <Github className="w-5 h-5" />
               </a>
-              <a 
+              <a
                 href={socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
