@@ -31,10 +31,10 @@ export default function Portfolio() {
 
   // Stats animados - Actualizados con paleta de colores
   const stats = [
-    { icon: Code2, label: "Proyectos Completados", value: 15, suffix: "+", color: "from-indigo-400 to-indigo-500" },
-    { icon: GitFork, label: "Commits en GitHub", value: 200, suffix: "+", color: "from-indigo-500 to-indigo-600" },
-    { icon: Award, label: "Tecnologías Dominadas", value: 10, suffix: "+", color: "from-indigo-600 to-indigo-700" },
-    { icon: Star, label: "Años de Experiencia", value: 2, suffix: "", color: "from-indigo-400 to-indigo-600" }
+    { icon: Code2, label: "Proyectos Entregados", value: 15, suffix: "+", color: "from-indigo-400 to-indigo-500" },
+    { icon: GitFork, label: "Soluciones Implementadas", value: 200, suffix: "+", color: "from-indigo-500 to-indigo-600" },
+    { icon: Award, label: "Tecnologías de Vanguardia", value: 10, suffix: "+", color: "from-indigo-600 to-indigo-700" },
+    { icon: Star, label: "Años Impulsando Negocios", value: 2, suffix: "+", color: "from-indigo-400 to-indigo-600" }
   ];
 
   useEffect(() => {
@@ -184,7 +184,7 @@ export default function Portfolio() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
           <div className="flex justify-between items-center">
             <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-indigo-400 to-indigo-300 bg-clip-text text-transparent">
-              Nicolás Hernández
+              Expande WEB
             </div>
 
             {/* Menú desktop */}
@@ -235,9 +235,9 @@ export default function Portfolio() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center relative z-10">
           <div className="mb-6">
-            <div className="w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-indigo-400 to-indigo-600 p-1 shadow-2xl shadow-indigo-500/50 animate-float">
+            <div className="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 mx-auto mb-8 rounded-full bg-gradient-to-br from-indigo-400 to-indigo-600 p-1.5 sm:p-2 shadow-2xl shadow-indigo-500/50 animate-float">
               <img
-                src="/images/perfil.jpeg"
+                src="/images/perfil.png"
                 alt="Nicolás Hernández"
                 className="w-full h-full rounded-full object-cover"
               />
@@ -246,14 +246,12 @@ export default function Portfolio() {
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6">
             <span className="bg-gradient-to-r from-indigo-400 via-indigo-500 to-indigo-600 bg-clip-text text-transparent">
-              Nicolás Hernández
+              Expande WEB
             </span>
           </h1>
-
           <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto px-4">
-            Estudiante de Ingeniería en Informática | Desarrollador Full Stack apasionado por crear soluciones digitales innovadoras
+            Agencia de Software | Especialistas en Desarrollo Full Stack apasionados por crear soluciones digitales innovadoras y escalables para tu negocio.
           </p>
-
           <div className="flex gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 flex-wrap px-4">
             {[
               { href: socialLinks.github, icon: Github, label: "GitHub" },
@@ -283,7 +281,7 @@ export default function Portfolio() {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
               </svg>
-              Descargar CV
+              Solicitar Propuesta
             </a>
           </div>
 
@@ -304,7 +302,7 @@ export default function Portfolio() {
               Estadísticas
             </h2>
             <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto">
-              Mi progreso y experiencia en números
+              Nuestro impacto en números
             </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
@@ -344,10 +342,10 @@ export default function Portfolio() {
               <span className="text-indigo-400 font-medium text-sm sm:text-base">Portafolio</span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-white">
-              Mis Proyectos
+              Nuestros Proyectos
             </h2>
             <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto">
-              Una colección de proyectos que demuestran mis habilidades técnicas y creatividad
+              Una selección de soluciones digitales que demuestran nuestra capacidad técnica y compromiso con la excelencia.
             </p>
           </div>
 
@@ -510,7 +508,7 @@ export default function Portfolio() {
               Experiencia
             </h2>
             <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto">
-              Mi trayectoria profesional y desarrollo continuo
+              Trayectoria y compromiso con la innovación constante
             </p>
           </div>
 
@@ -536,40 +534,24 @@ export default function Portfolio() {
               <span className="text-indigo-400 font-medium text-sm sm:text-base">Formación</span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-white">
-              Educación
-            </h2>
-          </div>
+              Nuestros Valores y Misión
+            </h2>          </div>
 
           <div className="max-w-3xl mx-auto">
-            {education.map((edu, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-gray-700/50 hover:border-indigo-500/50 transition-all duration-500 hover:scale-105"
-              >
-                <div className="flex items-start gap-3 sm:gap-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center flex-shrink-0">
-                    <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-1 sm:mb-2 text-white">
-                      {edu.degree}
-                    </h3>
-                    <p className="text-indigo-400 font-medium text-sm sm:text-base mb-1 sm:mb-2">
-                      {edu.institution}
-                    </p>
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 text-gray-400 text-xs sm:text-sm">
-                      <span>{edu.period}</span>
-                      <span className="hidden sm:block">•</span>
-                      <span className="text-indigo-400 font-medium">{edu.status}</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+            <div className="space-y-6">
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-gray-700/50 hover:border-indigo-500/50 transition-all duration-500">
+                <h3 className="text-xl font-bold mb-4 text-indigo-400">Nuestra Misión</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  En Expande WEB, nuestra misión es democratizar el acceso a software de alta calidad, permitiendo que empresas de todos los tamaños escalen sus operaciones mediante soluciones tecnológicas modernas, eficientes y centradas en el usuario.
+                </p>
+              </div>
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-gray-700/50 hover:border-indigo-500/50 transition-all duration-500">
+                <h3 className="text-xl font-bold mb-4 text-indigo-400">Nuestra Visión</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Convertirnos en el socio tecnológico líder para emprendedores y empresas que buscan trascender en la era digital, destacándonos por nuestra innovación, transparencia y excelencia en el desarrollo.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -582,8 +564,8 @@ export default function Portfolio() {
               ¿Trabajemos Juntos?
             </h2>
             <p className="text-lg sm:text-xl text-gray-400 mb-6 sm:mb-8 max-w-3xl mx-auto">
-              Estoy siempre abierto a nuevos proyectos, colaboraciones y oportunidades.
-              ¡Hablemos sobre cómo puedo ayudarte a hacer realidad tu idea!
+              Estamos siempre abiertos a nuevos proyectos, colaboraciones y oportunidades.
+              ¡Hablemos sobre cómo podemos ayudar a hacer realidad tu idea!
             </p>
           </div>
 
@@ -622,14 +604,14 @@ export default function Portfolio() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-center md:text-left">
               <div className="text-xl font-bold bg-gradient-to-r from-indigo-400 to-indigo-300 bg-clip-text text-transparent">
-                Nicolás Hernández
+                Expande WEB
               </div>
               <p className="text-gray-400 text-sm mt-1">Desarrollador Full Stack</p>
             </div>
 
             <div className="text-center">
               <p className="text-gray-400 text-sm">
-                © 2024 Nicolás Hernández. Todos los derechos reservados.
+                © 2024 Expande WEB. Todos los derechos reservados.
               </p>
               <p className="text-gray-500 text-xs mt-1">
                 Desarrollado con React, Tailwind y CSS

@@ -1,169 +1,213 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    
-    <!-- Favicon -->
-    <link rel="icon" href="%PUBLIC_URL%/images/faviconweb.jpg" />
-    <link rel="icon" type="image/jpeg" href="%PUBLIC_URL%/images/faviconweb.jpg" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/images/faviconweb.jpg" />
-    
-    <!-- Viewport y theme -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#6366F1" />
-    
-    <!-- SEO META TAGS MEJORADOS -->
-    <meta name="description" content="Portafolio profesional de Nicolás Hernández - Ingeniero en Informática y Desarrollador Full Stack especializado en React, JavaScript, Node.js y MongoDB" />
-    <meta name="keywords" content="desarrollador web, programador, react developer, javascript, full stack, ingeniería informática, portfolio, nicolás hernández, desarrollador frontend, desarrollador backend" />
-    <meta name="author" content="Nicolás Hernández" />
-    <meta name="robots" content="index, follow" />
-    <meta name="language" content="Spanish" />
-    
-    <!-- Open Graph para redes sociales -->
-    <meta property="og:title" content="Nicolás Hernández | Desarrollador Full Stack" />
-    <meta property="og:description" content="Portafolio profesional - Ingeniero en Informática especializado en desarrollo web moderno" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="%PUBLIC_URL%/images/perfil.jpeg" />
-    <meta property="og:url" content="https://nicolas-hernandez-portfolio.netlify.app" />
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Nicolás Hernández - Portafolio" />
-    <meta name="twitter:description" content="Desarrollador Full Stack | React | JavaScript | Node.js" />
-    <meta name="twitter:image" content="%PUBLIC_URL%/images/perfil.jpeg" />
-    
-    <!-- Structured Data para Google -->
-    <script type="application/ld+json">
+
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="%PUBLIC_URL%/images/faviconweb.jpg" />
+  <link rel="icon" type="image/jpeg" href="%PUBLIC_URL%/images/faviconweb.jpg" />
+  <link rel="shortcut icon" href="%PUBLIC_URL%/images/faviconweb.jpg" />
+
+  <!-- Viewport y theme -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#6366F1" />
+
+  <!-- SEO META TAGS MEJORADOS -->
+  <meta name="description"
+    content="Expande WEB - Agencia de Software especializada en soluciones digitales modernas, desarrollo Full Stack con React, Node.js y transformación digital." />
+  <meta name="keywords"
+    content="agencia software, desarrollo web, transformación digital, react developer, full stack agency, desarrollo a medida, Expande WEB, soluciones digitales" />
+  <meta name="author" content="Expande WEB" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="Spanish" />
+
+  <!-- Open Graph para redes sociales -->
+  <meta property="og:title" content="Expande WEB | Impulsando tu Presencia Digital" />
+  <meta property="og:description"
+    content="Agencia de desarrollo web y soluciones digitales modernas. Creamos software escalable y de alto impacto." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="%PUBLIC_URL%/images/perfil.png" />
+  <meta property="og:url" content="https://expandeweb.com" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Expande WEB - Agencia Digital" />
+  <meta name="twitter:description" content="Desarrollo Full Stack | Transformación Digital | React | Node.js" />
+  <meta name="twitter:image" content="%PUBLIC_URL%/images/perfil.png" />
+
+  <!-- Structured Data para Google -->
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Nicolás Hernández",
-      "url": "https://nicolas-hernandez-portfolio.netlify.app",
-      "image": "%PUBLIC_URL%/images/perfil.jpeg",
-      "jobTitle": "Desarrollador Full Stack",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Freelance"
-      },
-      "alumniOf": {
-        "@type": "EducationalOrganization",
-        "name": "Universidad Tecnológica"
-      },
+      "@type": "Organization",
+      "name": "Expande WEB",
+      "url": "https://expandeweb.com",
+      "logo": "%PUBLIC_URL%/images/perfil.png",
+      "description": "Agencia de software y soluciones digitales especializada en desarrollo web moderno.",
       "knowsAbout": ["React", "JavaScript", "Node.js", "MongoDB", "Firebase", "HTML/CSS", "Tailwind CSS"],
       "sameAs": [
         "https://github.com/SAYKOTM",
-        "https://www.linkedin.com/in/nicol%C3%A1s-hern%C3%A1ndez-3307142ba/",
-        "https://www.instagram.com/its.nlvssj/"
+        "https://www.linkedin.com/company/expandeweb",
+        "https://www.instagram.com/expandeweb"
       ]
     }
     </script>
-    
-    <!-- PWA -->
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/images/faviconweb.jpg" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Configuración Tailwind -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'indigo': {
-                400: '#818CF8',
-                500: '#6366F1',
-                600: '#4F46E5',
-                700: '#4338CA',
-              },
-              'gray': {
-                600: '#4B5563',
-                700: '#374151',
-                800: '#1F2937',
-                900: '#111827',
-              }
+
+  <!-- PWA -->
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/images/faviconweb.jpg" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Configuración Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'indigo': {
+              400: '#818CF8',
+              500: '#6366F1',
+              600: '#4F46E5',
+              700: '#4338CA',
             },
-            animation: {
-              'fadeIn': 'fadeIn 0.5s ease-in-out',
-              'slideInUp': 'slideInUp 0.6s ease-out',
-              'float': 'float 3s ease-in-out infinite',
-              'bounce': 'bounce 2s infinite',
-              'pulse-slow': 'pulse 3s infinite'
+            'gray': {
+              600: '#4B5563',
+              700: '#374151',
+              800: '#1F2937',
+              900: '#111827',
+            }
+          },
+          animation: {
+            'fadeIn': 'fadeIn 0.5s ease-in-out',
+            'slideInUp': 'slideInUp 0.6s ease-out',
+            'float': 'float 3s ease-in-out infinite',
+            'bounce': 'bounce 2s infinite',
+            'pulse-slow': 'pulse 3s infinite'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' }
             },
-            keyframes: {
-              fadeIn: {
-                '0%': { opacity: '0' },
-                '100%': { opacity: '1' }
-              },
-              slideInUp: {
-                '0%': { transform: 'translateY(20px)', opacity: '0' },
-                '100%': { transform: 'translateY(0)', opacity: '1' }
-              },
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-20px)' }
-              },
-              bounce: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-10px)' }
-              }
+            slideInUp: {
+              '0%': { transform: 'translateY(20px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' }
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' }
+            },
+            bounce: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' }
             }
           }
         }
       }
-    </script>
-    
-    <style>
-      /* Estilos base */
-      @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-      @keyframes slideInUp {
-        from { opacity: 0; transform: translateY(40px); }
-        to { opacity: 1; transform: translateY(0); }
+    }
+  </script>
+
+  <style>
+    /* Estilos base */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
       }
-      @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-20px); }
+
+      to {
+        opacity: 1;
       }
-      @keyframes bounce {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
+    }
+
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
       }
-      
-      /* Scrollbar personalizada */
-      ::-webkit-scrollbar { width: 10px; }
-      ::-webkit-scrollbar-track { background: #1F2937; }
-      ::-webkit-scrollbar-thumb { background: #4F46E5; border-radius: 5px; }
-      ::-webkit-scrollbar-thumb:hover { background: #6366F1; }
-      
-      html { scroll-behavior: smooth; }
-      
-      body {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-rendering: optimizeLegibility;
-        margin: 0;
-        padding: 0;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
-    </style>
-    
-    <title>Nicolás Hernández | Desarrollador Full Stack & Ingeniero en Informática</title>
-  </head>
-  <body class="bg-gray-900">
-    <noscript>
-      <div class="flex items-center justify-center min-h-screen p-4 text-center">
-        <div class="max-w-md p-8 bg-gray-800 rounded-2xl border border-gray-700">
-          <h1 class="text-2xl font-bold text-indigo-400 mb-4">JavaScript Requerido</h1>
-          <p class="text-gray-300 mb-6">Esta aplicación web requiere JavaScript para funcionar correctamente.</p>
-          <a href="https://www.enable-javascript.com/es/" target="_blank" rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-full font-medium hover:opacity-90 transition-opacity">
-            Cómo habilitar JavaScript
-          </a>
-        </div>
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* Scrollbar personalizada */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #1F2937;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #4F46E5;
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #6366F1;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    }
+  </style>
+
+  <title>Expande WEB | Soluciones Digitales & Desarrollo de Software</title>
+</head>
+
+<body class="bg-gray-900">
+  <noscript>
+    <div class="flex items-center justify-center min-h-screen p-4 text-center">
+      <div class="max-w-md p-8 bg-gray-800 rounded-2xl border border-gray-700">
+        <h1 class="text-2xl font-bold text-indigo-400 mb-4">JavaScript Requerido</h1>
+        <p class="text-gray-300 mb-6">Esta aplicación web requiere JavaScript para funcionar correctamente.</p>
+        <a href="https://www.enable-javascript.com/es/" target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-full font-medium hover:opacity-90 transition-opacity">
+          Cómo habilitar JavaScript
+        </a>
       </div>
-    </noscript>
-    <div id="root"></div>
-  </body>
+    </div>
+  </noscript>
+  <div id="root"></div>
+</body>
+
 </html>
